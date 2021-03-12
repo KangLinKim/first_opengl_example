@@ -29,7 +29,7 @@ int main(int argc, const char** argv) {
     SPDLOG_INFO("Initialize glfw");
     if (!glfwInit()) {                                                      // glfwInit이라는 함수를 초기화. 초기화에 실패할경우 0나 false가 출력될텐데 !는 not이라는 의미이므로 if이하는 'glfwInit이 실패한다면'이라는 의미를 갖는다
         const char* description = nullptr;                                  // |
-        glfwGetError(&description);                                         // |glfwGetError라는 함수를 이용해 윗줄에서 char형식으로 사유를 얻어와 아랫줄로 이동해 error와 사유메시지를 출력한다는 뜻  
+        glfwGetError(&description);                                         // | glfwGetError라는 함수를 이용해 윗줄에서 char형식으로 사유를 얻어와 아랫줄로 이동해 error와 사유메시지를 출력한다는 뜻  
         SPDLOG_ERROR("failed to initialize glfw: {}", description);         // |
         return -1;
     }
